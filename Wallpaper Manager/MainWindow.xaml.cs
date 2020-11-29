@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing.Imaging;
+using static Wallpaper_Manager.Enums.Enums;
 
 namespace Wallpaper_Manager
 {
@@ -24,16 +25,8 @@ namespace Wallpaper_Manager
     /// </summary>
     public partial class MainWindow : Window
     {
-        const int SPI_SETDESKWALLPAPER = 20;
-        const int SPIF_UPDATEINIFILE = 0x01;
-        const int SPIF_SENDWININICHANGE = 0x02;
-
-        Style style;
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
-
         OpenFileDialog OpenFileDialog = new OpenFileDialog();
+        Enums.Enums.Style style;
         public MainWindow()
         {
             InitializeComponent();
@@ -46,7 +39,7 @@ namespace Wallpaper_Manager
             {
                 try
                 {
-                    Set(OpenFileDialog.FileName, style);
+                    WallpaperManager.Set(OpenFileDialog.FileName, style);
                 }
                 catch (Exception Ex)
                 {
@@ -54,77 +47,54 @@ namespace Wallpaper_Manager
                 }
             }
         }
-        
-        public enum Style : int
+        private void Set_Anm_Wallpaper(object sender, RoutedEventArgs e)
         {
-            Tiled,
-            Centered,
-            Stretched,
-            Fit,
-            Fill
-        }
-
-
-        public static void Set(string imgPath, Style style)
-        {
-            var img = System.Drawing.Image.FromFile(System.IO.Path.GetFullPath(imgPath));
-            string tempPath = imgPath; //System.IO.Path.Combine(System.IO.Path.GetTempPath(), "wallpaper.bmp");
-            img.Save("C:/Test.jpg", ImageFormat.Jpeg);
-
-            var key = Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true);
-
-            switch (style)
+            var status = OpenFileDialog.ShowDialog();
+            if (status.Equals(true))
             {
-                case Style.Tiled:
-                    key.SetValue(@"WallpaperStyle", 1.ToString());
-                    key.SetValue(@"TileWallpaper", 1.ToString());
-                    break;
-                case Style.Centered:
-                    key.SetValue(@"WallpaperStyle", 1.ToString());
-                    key.SetValue(@"TileWallpaper", 0.ToString());
-                    break;
-                case Style.Stretched:
-                    key.SetValue(@"WallpaperStyle", 2.ToString());
-                    key.SetValue(@"TileWallpaper", 0.ToString());
-                    break;
-                case Style.Fit:
-                    key.SetValue(@"WallpaperStyle", "6");
-                    key.SetValue(@"TileWallpaper", "0");
-                    break;
-                case Style.Fill:
-                    key.SetValue(@"WallpaperStyle", "10");
-                    key.SetValue(@"TileWallpaper", "0");
-                    break;
+                try
+                {
+                    OpenFileDialog.ValidateNames = false;
+                    OpenFileDialog.CheckFileExists = false;
+                    OpenFileDialog.CheckPathExists = true;
+                    
+                    string folderPath = System.IO.Path.GetDirectoryName(OpenFileDialog.FileName);
+                    string[] files =Directory.GetFiles(folderPath);
 
+                    WallpaperManager.SetAnm(files, style);
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.ToString());
+                }
             }
-
-            SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, imgPath, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
         }
 
         #region ComboBox
         private void ComboBoxItem_Selected_Tiled(object sender, RoutedEventArgs e)
         {
-            style = Style.Tiled;
+            style = Enums.Enums.Style.Tiled;
         }
 
         private void ComboBoxItem_Selected_Centered(object sender, RoutedEventArgs e)
         {
-            style = Style.Centered;
+            style = Enums.Enums.Style.Centered;
         }
 
         private void ComboBoxItem_Selected_Stretched(object sender, RoutedEventArgs e)
         {
-            style = Style.Stretched;
+            style = Enums.Enums.Style.Stretched;
         }
 
         private void ComboBoxItem_Selected_Fit(object sender, RoutedEventArgs e)
         {
-            style = Style.Fit;
+            style = Enums.Enums.Style.Fit;
         }
 
         private void ComboBoxItem_Selected_Fill(object sender, RoutedEventArgs e)
         {
-            style = Style.Fill;
+            style = Enums.Enums.Style.Fill;
         }
         #endregion
     }

@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Height="50" Width="100" Content="Set Wallpaper" Click="Set_Wallpaper"/>
+        <Button Height="50" Width="100" Content="Set Anm Wallpaper" Click="Set_Anm_Wallpaper" Margin="451,184,241,185"/>
         <ComboBox Height="50" Width="100" Margin="346,240,346,129">
             <ComboBoxItem Content="Tiled" Selected="ComboBoxItem_Selected_Tiled"/>
             <ComboBoxItem Content="Centered" Selected="ComboBoxItem_Selected_Centered"/>
