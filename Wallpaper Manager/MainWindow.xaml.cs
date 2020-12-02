@@ -17,13 +17,14 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing.Imaging;
 using static Wallpaper_Manager.Enums.Enums;
+using MahApps.Metro.Controls;
 
 namespace Wallpaper_Manager
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         OpenFileDialog OpenFileDialog = new OpenFileDialog();
         Enums.Enums.Style style;
