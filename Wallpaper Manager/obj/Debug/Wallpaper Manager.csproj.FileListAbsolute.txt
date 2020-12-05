@@ -17,32 +17,23 @@ C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\obj\Debug\Wallpa
 C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.exe
 C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.pdb
 C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\System.Drawing.Common.dll
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\Wallpaper Manager.exe.config
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\Wallpaper Manager.exe
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\Wallpaper Manager.pdb
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\System.Drawing.Common.dll
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\WallpaperManagerLib.pdb
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.csprojAssemblyReference.cache
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\MainWindow.g.cs
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\App.g.cs
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager_MarkupCompile.cache
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager_MarkupCompile.lref
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\MainWindow.baml
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.g.resources
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper_Manager.Properties.Resources.resources
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.csproj.GenerateResource.cache
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.csproj.CoreCompileInputs.cache
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.csproj.CopyComplete
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.exe
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\Wallpaper Manager.pdb
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\ControlzEx.dll
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\MahApps.Metro.dll
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\Microsoft.Xaml.Behaviors.dll
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\ControlzEx.pdb
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\ControlzEx.xml
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\MahApps.Metro.pdb
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\MahApps.Metro.xml
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\Microsoft.Xaml.Behaviors.xml
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\bin\Debug\de\MahApps.Metro.resources.dll
-C:\Users\Unit6\Wallpaper-Manager\Wallpaper Manager\obj\Debug\App.baml
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\ControlzEx.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\MahApps.Metro.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\ControlzEx.pdb
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\ControlzEx.xml
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\MahApps.Metro.pdb
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\MahApps.Metro.xml
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\obj\Debug\App.baml
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\ExpressionEvaluator.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\GSF.Core.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\GSF.Security.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\GSF.Windows.dll
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\GSF.Core.xml
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\GSF.Security.xml
+C:\Users\Unit6\source\repos\Wallpaper Manager\Wallpaper Manager\bin\Debug\GSF.Windows.xml

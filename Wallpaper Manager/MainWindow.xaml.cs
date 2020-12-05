@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using System.Drawing.Imaging;
 using static Wallpaper_Manager.Enums.Enums;
 using MahApps.Metro.Controls;
+using System.Windows.Forms;
 
 namespace Wallpaper_Manager
 {
@@ -26,76 +27,48 @@ namespace Wallpaper_Manager
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        OpenFileDialog OpenFileDialog = new OpenFileDialog();
+        Managers.TrayManager trayManager = new Managers.TrayManager();
+        Microsoft.Win32.OpenFileDialog OpenFileDialog = new Microsoft.Win32.OpenFileDialog();
+        WallpaperManager wallpaperManager = new WallpaperManager();
         Enums.Enums.Style style;
         public MainWindow()
         {
+            trayManager.setup();    
             InitializeComponent();
         }
-
         private void Set_Wallpaper(object sender, RoutedEventArgs e)
         {
-            var status = OpenFileDialog.ShowDialog();
-            if (status.Equals(true))
-            {
-                try
-                {
-                    WallpaperManager.Set(OpenFileDialog.FileName, style);
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.ToString());
-                }
-            }
+            wallpaperManager.Set_Wallpaper();
         }
         private void Set_Anm_Wallpaper(object sender, RoutedEventArgs e)
         {
-            var status = OpenFileDialog.ShowDialog();
-            if (status.Equals(true))
-            {
-                try
-                {
-                    OpenFileDialog.ValidateNames = false;
-                    OpenFileDialog.CheckFileExists = false;
-                    OpenFileDialog.CheckPathExists = true;
-                    
-                    string folderPath = System.IO.Path.GetDirectoryName(OpenFileDialog.FileName);
-                    string[] files =Directory.GetFiles(folderPath);
-
-                    WallpaperManager.SetAnm(files, style);
-
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.ToString());
-                }
-            }
+            wallpaperManager.Set_Anm_Wallpaper();
         }
 
         #region ComboBox
         private void ComboBoxItem_Selected_Tiled(object sender, RoutedEventArgs e)
         {
-            style = Enums.Enums.Style.Tiled;
+            wallpaperManager.style = Enums.Enums.Style.Tiled;
         }
 
         private void ComboBoxItem_Selected_Centered(object sender, RoutedEventArgs e)
         {
-            style = Enums.Enums.Style.Centered;
+            wallpaperManager.style = Enums.Enums.Style.Centered;
         }
 
         private void ComboBoxItem_Selected_Stretched(object sender, RoutedEventArgs e)
         {
-            style = Enums.Enums.Style.Stretched;
+            wallpaperManager.style = Enums.Enums.Style.Stretched;
         }
 
         private void ComboBoxItem_Selected_Fit(object sender, RoutedEventArgs e)
         {
-            style = Enums.Enums.Style.Fit;
+            wallpaperManager.style = Enums.Enums.Style.Fit;
         }
 
         private void ComboBoxItem_Selected_Fill(object sender, RoutedEventArgs e)
         {
-            style = Enums.Enums.Style.Fill;
+            wallpaperManager.style = Enums.Enums.Style.Fill;
         }
         #endregion
     }

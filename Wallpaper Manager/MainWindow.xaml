@@ -6,13 +6,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wallpaper_Manager"
         mc:Ignorable="d"
-        Background="#252525"
+        Background="#222222"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
         <Button Height="50" Width="100" Content="Set Wallpaper" Click="Set_Wallpaper"/>
         <Button Height="50" Width="100" Content="Set Anm Wallpaper" Click="Set_Anm_Wallpaper" Margin="451,184,241,185"/>
-        <ComboBox Height="50" Width="100" Margin="346,240,346,129">
-            <ComboBoxItem IsSelected="True" Content="Tiled" Selected="ComboBoxItem_Selected_Tiled"/>
+        <ComboBox Height="50" Width="100" Margin="241,184,451,185">
+            <ComboBoxItem Content="Tiled" Selected="ComboBoxItem_Selected_Tiled"/>
             <ComboBoxItem Content="Centered" Selected="ComboBoxItem_Selected_Centered"/>
             <ComboBoxItem Content="Stretched" Selected="ComboBoxItem_Selected_Stretched"/>
             <ComboBoxItem Content="Fit" Selected="ComboBoxItem_Selected_Fit"/>

@@ -2,9 +2,17 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Wallpaper_Manager"
+             ShutdownMode="OnExplicitShutdown"
+             Exit="Application_Exit"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary>
+        <ContextMenu x:Key="NotifierContextMenu" Placement="MousePoint">
+            <MenuItem Click="MenuItem_Set_Wallpaper" Header="Set Wallpaper"/>
+            <MenuItem Click="MenuItem_Anm_Wallpaper" Header="Set Anm Wallpaper"/>
+            <MenuItem Click="MenuItem_Close" Header="Close" />
+        </ContextMenu>
+        
+         <ResourceDictionary x:Key="test">
             <ResourceDictionary.MergedDictionaries>
                 <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />

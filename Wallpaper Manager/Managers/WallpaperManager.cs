@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using static Wallpaper_Manager.MainWindow;
 using static Wallpaper_Manager.Enums.Enums;
+using System.Windows.Forms;
+using System.IO;
 
 namespace Wallpaper_Manager
 {
@@ -16,8 +18,53 @@ namespace Wallpaper_Manager
         const int SPI_SETDESKWALLPAPER = 20;
         const int SPIF_UPDATEINIFILE = 0x01;
         const int SPIF_SENDWININICHANGE = 0x02;
+        
+        Microsoft.Win32.OpenFileDialog OpenFileDialog = new Microsoft.Win32.OpenFileDialog();
+
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
+
         static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+        public Enums.Enums.Style style;
+
+        public void Set_Wallpaper()
+        {
+            var status = OpenFileDialog.ShowDialog();
+            if (status.Equals(true))
+            {
+                try
+                {
+                    Set(OpenFileDialog.FileName, style);
+                }
+                catch (Exception Ex)
+                {
+                    System.Windows.MessageBox.Show(Ex.ToString());
+                }
+            }
+        }
+
+        public void Set_Anm_Wallpaper()
+        {
+            var status = OpenFileDialog.ShowDialog();
+            if (status.Equals(true))
+            {
+                try
+                {
+                    OpenFileDialog.ValidateNames = false;
+                    OpenFileDialog.CheckFileExists = false;
+                    OpenFileDialog.CheckPathExists = true;
+
+                    string folderPath = System.IO.Path.GetDirectoryName(OpenFileDialog.FileName);
+                    string[] files = Directory.GetFiles(folderPath);
+
+                    SetAnm(files, style);
+
+                }
+                catch (Exception Ex)
+                {
+                    System.Windows.MessageBox.Show(Ex.ToString());
+                }
+            }
+        }
         public static void Set(string imgPath,  Style style)
         {
             var img = System.Drawing.Image.FromFile(System.IO.Path.GetFullPath(imgPath));
@@ -56,7 +103,7 @@ namespace Wallpaper_Manager
 
         public static void SetAnm(string[] imgPath, Enums.Enums.Style style)
         {
-            for(int i = 0; i <= imgPath.Length; i++)
+            for(int i = 0; i == imgPath.Length; i++)
             {
                 var img = System.Drawing.Image.FromFile(System.IO.Path.GetFullPath(imgPath[i]));
                 string tempPath = imgPath[i]; //System.IO.Path.Combine(System.IO.Path.GetTempPath(), "wallpaper.bmp");
